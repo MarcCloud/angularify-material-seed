@@ -19,7 +19,7 @@ Tools Used
 + [Istanbul](http://gotwarlost.github.io/istanbul/) : JavaScript code coverage tool and reporter.
 + [JSHint](http://jshint.com/) : Code quality analyzer. Detects code smells and bad practices.
 + [Jade](http://jade-lang.com/) : Templating language to create re-usable HTML components.
-+ [Sass](http://sass-lang.com/) : CSS preprocessor that helps us maintain our css assets.
++ [Stylus](http://learnboost.github.io/stylus/) : CSS preprocessor that helps us maintain our css assets.
 + [AngularJS](https://angularjs.org/) : JavaScript Front-End framework to structure and fast develop web applications.
 + [UI Router](http://angular-ui.github.io/ui-router/): State based routing for your Angular application views.
 + [Angular Material](https://material.angularjs.org)Google's Material-Design styles and components implemented for AngularJS framework.
