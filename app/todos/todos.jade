@@ -1,2 +1,9 @@
-#todos
-   h1(ng-bind="todos.heading")
+section#todos
+   md-toolbar.md-scroll-shrink
+      .md-toolbar-tools
+         h3 My Todos:
+
+   md-content.md-padding
+      md-list
+         md-item(ng-repeat="todo in todos.todos")
+            md-checkbox(ng-model="todo.done"){{todo.summary}}

@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     browserify = require('browserify'),
     source = require('vinyl-source-stream'),
     jade = require('gulp-jade'),
-    sass = require('gulp-sass'),
+    stylus = require('gulp-stylus'),
+    minifycss=require('gulp-minify-css'),
     rename = require('gulp-rename'),
     flatten = require('gulp-flatten'),
     connect=require('gulp-connect'),
@@ -33,15 +34,16 @@ var gulp = require('gulp'),
     });
 
     gulp.task('css',function(){
-       return gulp.src('./app/**/*.scss')
-           .pipe(sass())
+       return gulp.src('./app/**/*.styl')
+           .pipe(stylus({'include css':true}))
+           .pipe(minifycss())
            .pipe(rename('spa.min.css'))
            .pipe(gulp.dest('./dist/styles'))
            .pipe(connect.reload());
     });
 
     gulp.task('js',function(){
-       return browserify('./app/app.js',{debug:true}).bundle()
+       return browserify('./app/app.js',{debug:true,transform:'debowerify'}).bundle()
            .pipe(source('spa.bundle.js'))
            .pipe(gulp.dest('./dist/scripts'))
            .pipe(connect.reload());

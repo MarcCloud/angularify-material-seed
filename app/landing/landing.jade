@@ -1,3 +1,7 @@
-#landing
-   h1(ng-bind="landing.heading")
-   a(ui-sref="todos") Go to my To-Do list
+section#landing(layout="row")
+   md-toolbar.md-accent1
+      .md-toolbar-tools
+         md-button.md-accent.md-raised.md-hue-1(ui-sref="todos") See my todo list.
+   md-content.md-padding
+
+

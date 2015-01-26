@@ -1,11 +1,9 @@
 /**
  * Created by Marco Romero on 1/8/2015.
  */
-'use strict';
-var angular= require('angular');
-    require('ui-route');
-    require('angular-bootstrap');
-var app = angular.module('spa',['ui.router','ui.bootstrap']);
+    'use strict';
+    require('./core-dependencies');
+var app = angular.module('spa',['ui.router','ngMaterial']);
     require('./landing');
     require('./todos');
 
